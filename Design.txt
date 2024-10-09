@@ -1,0 +1,69 @@
+2. Objective
+
+To create an Angular application where users input an Item ID, fetch associated work item details, and display the information in a popup. Users can select specific data sections (Work Item Details, Notes, Attachments, Audit History) to download as a PDF.
+3. Key Features
+
+    Input field for Item ID.
+    Fetch Data button to retrieve and display work item details in a popup.
+    Sections in popup:
+        Work Item Details (Cosmic Work Item, Case Item, Summary, Telephone, Address, Entity Accounts, Transactions)
+        Work Item Notes
+        Work Item Attachments
+        Work Item Audit History
+    Checkbox options to select which sections to download in a PDF format.
+
+4. Functional Requirements
+
+    Input validation for Item ID.
+    API to retrieve work item data based on Item ID.
+    Dynamic popup with selectable data sections.
+    PDF generation based on user selections.
+
+5. Non-functional Requirements
+
+    Responsive design for various devices.
+    Loading indicators and error handling.
+    Client-side PDF generation.
+
+6. Architecture Overview
+
+    Frontend: Angular-based UI for data input, fetching, and PDF download.
+    Backend: RESTful API to fetch data by Item ID.
+
+7. Detailed Design
+
+    Components:
+        Input form for Item ID and Fetch Data button.
+        Popup displaying fetched data sections with checkboxes.
+        Download button for PDF generation.
+
+    API:
+        GET /api/items/{itemId}: Fetches data for a given Item ID.
+
+    PDF Generation:
+        Using jsPDF library to generate professional, formatted PDF documents.
+
+Data Structure
+
+    Work Item Details:
+        Cosmic Work Item, Case Item, Summary, Telephone, Address, Entity Accounts, Transactions.
+    Work Item Notes: Date, Entered By, Action, Note.
+    Work Item Attachments: File Name, Attach Date, Size, Attached Flag.
+    Work Item Audit History: Date, Action, Performed By, History Line.
+
+8. Technology Stack
+
+    Frontend: Angular, Bootstrap, jsPDF
+    Backend: Node.js/Express (or equivalent REST API)
+    Tools: Git, CI/CD, Cloud Hosting (AWS/Azure)
+
+9. Security & Testing
+
+    Input validation and secure API communication.
+    Unit and integration tests for components and API interaction.
+    User Acceptance Testing (UAT).
+
+10. Deployment & Maintenance
+
+    Deployment: Hosted on cloud platforms (AWS, Azure, etc.).
+    Maintenance: Regular updates and support documentation.
